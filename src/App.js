@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentWillMount(){
-    fetch('http://api.giphy.com/v1/gifs/random?tag=motivation&api_key=plQtJUwnpc82BLWtkIZaL5ROQnZs92bx&limit=1').then(resp => resp.json())
+    fetch('https://api.giphy.com/v1/gifs/random?tag=motivation&api_key=plQtJUwnpc82BLWtkIZaL5ROQnZs92bx&limit=1').then(resp => resp.json())
     .then(data => {
       this.setState({url: data.data.image_original_url})
     })
